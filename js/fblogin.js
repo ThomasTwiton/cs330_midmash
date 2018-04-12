@@ -73,8 +73,11 @@
   }
 
   function onClick() {
-    FB.api('/me?fields=picture', function(response) {
-        localStorage["waldo"] = response.picture.data.url;
-      });
+    //FB.api('/me?fields=picture', function(response) {
+        //localStorage["waldo"] = response.picture.data.url;
+      //});
+      FB.api('/me', function(response) {
+          localStorage["waldo"] = "https://graph.facebook.com/" + response.id + "/picture?type=square"
+        })
       window.location = "https://thomastwiton.github.io/cs330_midmash/mapsearch.html"
   }
