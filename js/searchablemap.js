@@ -46,7 +46,7 @@ function initMap() {
        counter =  counter +1
        //youmarker not marker
        youinfowindow.open(map, youmarker)
-       alert("You found yourself in" + counter + " tries!")
+       alert("You found yourself in " + counter + " tries!")
    })
 
 }
