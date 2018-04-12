@@ -71,3 +71,7 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
+
+  function onClick() {
+      window.location = "https://thomastwiton.github.io/cs330_midmash/mapsearch.html"
+  }
