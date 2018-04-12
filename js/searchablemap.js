@@ -12,7 +12,7 @@ function initMap() {
     center: {lat: 43.303, lng: -91.786}
   });
 
-  for (let i = 0; i<5; i++){
+  for (let i = 0; i<20; i++){
       let marker = new google.maps.Marker({
         position: uluru,
         map: map
@@ -36,7 +36,7 @@ function initMap() {
    })
    let youpic = localStorage["waldo"]
    console.log(youpic)
-   let contentString = '<div>' + '<img src=' + youpic + ' alt="You!" width="128" height="128">' + '<p>You found yourself!</p>' + '</div>'
+   let contentString = '<div>' + '<img src=' + youpic + ' alt="You!">' + '<p>You found yourself!</p>' + '</div>'
    console.log(contentString)
    let youinfowindow = new google.maps.InfoWindow({
        content : contentString
@@ -46,7 +46,7 @@ function initMap() {
        counter =  counter +1
        //youmarker not marker
        youinfowindow.open(map, youmarker)
-       alert("You found yourself in" + counter + "tries!")
+       alert("You found yourself in" + counter + " tries!")
    })
 
 }
