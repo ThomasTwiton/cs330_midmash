@@ -36,8 +36,8 @@ function initMap() {
    })
    let youpic = localStorage["waldo"]
    console.log(youpic)
-   let contentString = '<div>' + '<img src=' + youpic + 'alt="Not Waldo" width="128" height="128">' + '<p>You found yourself!</p>' + '</div>'
-
+   let contentString = '<div>' + '<img src=' + youpic + ' alt="You!" width="128" height="128">' + '<p>You found yourself!</p>' + '</div>'
+   console.log(contentString)
    let youinfowindow = new google.maps.InfoWindow({
        content : contentString
    })
