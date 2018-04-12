@@ -48,9 +48,5 @@ function initMap() {
        alert("You found yourself in" + counter + "tries!")
    })
 
-   if (youinfowindow.content != '<div>' + '<img src="./images/skull.png" alt="Not Waldo" width="128" height="128">' + '<p>You have found neither Waldo nor yourself</p>' + '</div>'){
-    alert("You found yourself!")
-}
-  
 }
     
