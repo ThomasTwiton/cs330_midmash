@@ -73,5 +73,8 @@
   }
 
   function onClick() {
+    FB.api('/me?fields=picture', function(response) {
+        localStorage["waldo"] = response.picture.data.url;
+      });
       window.location = "https://thomastwiton.github.io/cs330_midmash/mapsearch.html"
   }
