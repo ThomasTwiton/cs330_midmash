@@ -1,6 +1,0 @@
-3giW2rMxElmVaGKdGNMaRNQRZUYpRnmPOk01SPf7h5NsgGgghN  TUMBLR
-JGPF03BGHPbhZghFs7bYun3NkMCG2tDwI3lGkMEkP92xoqZ9Y0  TUMBLR SECRET
-
-FB.api('/me?fields=picture', function(response) {
-  console.log(response);
-});
