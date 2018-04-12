@@ -21,16 +21,26 @@
         function initMap() {
           var uluru = {lat: getRandomInRange(-150, 150, 3), lng: getRandomInRange(-150, 150, 3)};
           var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 6,
-            center: {lat: 0, lng: 0}
+            zoom: 10,
+            center: {lat: 43.303, lng: -91.786}
           });
+
           for (let i = 0; i<50; i++){
-              var marker = new google.maps.Marker({
+              let marker = new google.maps.Marker({
                 position: uluru,
-               // icon = skull.png,
                 map: map
-          });          
-          uluru = {lat: getRandomInRange(-150, 150, 3), lng: getRandomInRange(-150, 150, 3)};
+              }); 
+
+              uluru = {lat: getRandomInRange(-150, 150, 3), lng: getRandomInRange(-150, 150, 3)};
+              let contentString = '<div>' + '<img src="skull.png" alt="Not Waldo" width="128" height="128">' + '<p>You have found neither Waldo nor yourself</p>' + '</div>'
+
+              let infowindow = new google.maps.InfoWindow({
+                content: contentString
+              })
+
+              marker.addListener('click', function() {
+                infowindow.open(map, marker)
+              })
           }
           
         }
