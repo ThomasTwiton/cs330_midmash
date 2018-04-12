@@ -44,7 +44,7 @@ function initMap() {
 
    youmarker.addListener('click', function(){
        counter =  counter +1
-       youinfowindow.open(map, marker)
+       youinfowindow.open(map, youmarker)
        alert("You found yourself in" + counter + "tries!")
    })
 
