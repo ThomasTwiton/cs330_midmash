@@ -84,10 +84,11 @@ function getRandomInRange(from, to, fixed) {
   }
 
   function onClick() {
-    localStorage.clear()
+    //localStorage.clear()
     FB.getLoginStatus(function(response){
       if(response.status === 'connected'){
         FB.api('/me?fields=picture.width(800).height(800)', function(response) {
+        localStorage.clear()
         localStorage["waldo"] = response.picture.data.url;        
         gametype = document.getElementsByName("gametype")
         if (gametype[0].checked){
