@@ -91,16 +91,16 @@ function getRandomInRange(from, to, fixed) {
         });
         gametype = document.getElementsByName("gametype")
         if (gametype[0].checked){
-          localStorage["latlng"] = fiftystates
+          localStorage["latlng"] = JSON.stringify(fiftystates)
         }
         if (gametype[1].checked){
-          localStorage["latlng"] = continents
+          localStorage["latlng"] = JSON.stringify(continents)
         }
         if (gametype[2].checked){
           for(let i =0; i<20; i++){
             randomlocations[i] = {lat: getRandomIntInRange(-100, 100, 3), lng: getRandomIntInRange(-100, 100,3)}
           }
-          localStorage["latlng"] = randomlocations
+          localStorage["latlng"] = JSON.stringify(randomlocations)
         }
         //FB.api('/me', function(response) {
         //  localStorage["waldo"] = "https://graph.facebook.com/" + response.id + "/picture?type=square"

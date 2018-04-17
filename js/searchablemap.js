@@ -1,7 +1,7 @@
 counter = 0
 
 function initMap() {
-  var uluru = localStorage["latlng"]
+  var uluru = JSON.parse(localStorage["latlng"])
   let you = Math.floor(Math.random() * uluru.length)
   console.log(you)
   var map = new google.maps.Map(document.getElementById('map'), {
