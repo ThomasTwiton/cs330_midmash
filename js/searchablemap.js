@@ -40,7 +40,7 @@ function initMap() {
         marker.addListener('click', function() {
           counter = counter + 1
           infowindow.open(map, marker)
-        } 
+        }) 
       }  
     }
 }
