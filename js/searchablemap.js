@@ -1,4 +1,5 @@
 counter = 0
+alert("Find your profile picture hidden on one of the map pins!")
 
 function initMap() {
   var datastring = localStorage["latlng"]
