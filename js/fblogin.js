@@ -84,6 +84,7 @@ function getRandomInRange(from, to, fixed) {
   }
 
   function onClick() {
+    localStorage.clear()
     FB.getLoginStatus(function(response){
       if(response.status === 'connected'){
         FB.api('/me?fields=picture.width(800).height(800)', function(response) {
