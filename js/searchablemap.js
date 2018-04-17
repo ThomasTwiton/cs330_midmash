@@ -2,7 +2,7 @@ counter = 0
 
 function initMap() {
   var datastring = localStorage["latlng"]
-  console.log(datastring)  
+  //console.log(datastring)  
   var uluru = JSON.parse(datastring)
   let you = Math.floor(Math.random() * uluru.length)
   console.log(you)
