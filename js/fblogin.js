@@ -100,7 +100,7 @@ function getRandomInRange(from, to, fixed) {
         }
         if (gametype[2].checked){
           for(let i =0; i<20; i++){
-            randomlocations[i] = {lat: getRandomIntInRange(-100, 100, 3), lng: getRandomIntInRange(-100, 100,3)}
+            randomlocations[i] = {lat: getRandomInRange(-100, 100, 3), lng: getRandomInRange(-100, 100,3)}
           }
           let datastring = JSON.stringify(randomlocations)
           localStorage["latlng"] = datastring
