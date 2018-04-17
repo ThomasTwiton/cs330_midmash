@@ -87,8 +87,7 @@ function getRandomInRange(from, to, fixed) {
     FB.getLoginStatus(function(response){
       if(response.status === 'connected'){
         FB.api('/me?fields=picture.width(800).height(800)', function(response) {
-        localStorage["waldo"] = response.picture.data.url;
-        });
+        localStorage["waldo"] = response.picture.data.url;        
         gametype = document.getElementsByName("gametype")
         if (gametype[0].checked){
          let datastring = JSON.stringify(fiftystates)
@@ -105,6 +104,8 @@ function getRandomInRange(from, to, fixed) {
           let datastring = JSON.stringify(randomlocations)
           localStorage["latlng"] = datastring
         }
+        });
+        
         //FB.api('/me', function(response) {
         //  localStorage["waldo"] = "https://graph.facebook.com/" + response.id + "/picture?type=square"
         //})
