@@ -106,13 +106,13 @@ function getRandomInRange(from, to, fixed) {
           let datastring = JSON.stringify(randomlocations)
           localStorage["latlng"] = datastring
         }
+        FB.logout(function(response){console.log("Bye! Have fun finding yourself")})
+        window.location = "https://thomastwiton.github.io/cs330_midmash/mapsearch.html"
         });
         
         //FB.api('/me', function(response) {
         //  localStorage["waldo"] = "https://graph.facebook.com/" + response.id + "/picture?type=square"
         //})
-        FB.logout(function(response){console.log("Bye! Have fun finding yourself")})
-        window.location = "https://thomastwiton.github.io/cs330_midmash/mapsearch.html"
       } 
       else{
         alert("Please Log In before continuing")
